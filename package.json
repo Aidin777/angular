@@ -1,0 +1,13 @@
+{
+  "name": "kit",
+  "description": "kit",
+  "version": "0.0.1",
+  "main": "server.js",
+  "dependencies": {
+    "express": "latest",
+    "jade": "latest",
+    "underscore": "latest",
+    "glob": "latest",
+    "load-grunt-tasks": "latest"
+  }
+}
