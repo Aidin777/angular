@@ -19,7 +19,7 @@ gulp.task('css', function () {
 
     var vendor = gulp.src('./vendor/normalize-css/normalize.css');
 
-    var bundle = gulp.src('./assets/css/app.scss')
+    var bundle = gulp.src('assets/css/app.scss')
         .pipe(plumber({
             errorHandler: function (err) {
                 console.log(err);
