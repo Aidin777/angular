@@ -9,15 +9,14 @@ var gulp              = require("gulp"),
     plumber           = require("gulp-plumber"),
     browserify        = require("browserify"),
     vinylSource       = require("vinyl-source-stream"),
-    es                = require("event-stream")
-    ;
+    es                = require("event-stream");
 
 
 
 //Задачи
-gulp.task('css', function () {
+gulp.task('css', function (){
 
-    var vendor = gulp.src('./vendor/normalize-css/normalize.css');
+    var vendor = gulp.src('vendor/normalize-css/normalize.css');
 
     var bundle = gulp.src('assets/css/app.scss')
         .pipe(plumber({
@@ -44,7 +43,7 @@ gulp.task('css', function () {
 //Название comdined.js
 //место для хранения build
 
-gulp.task('js', function () {
+gulp.task('js', function (){
 
         return browserify('./assets/js/bootstrap.js')
             .bundle().on('error', function (err) {
@@ -52,7 +51,7 @@ gulp.task('js', function () {
                 this.emit('end');
             })
             .pipe(vinylSource('combined.js'))
-            .pipe(gulp.dest('./build'));
+            .pipe(gulp.dest('./build/js'));
 
         //Angular
         //d3

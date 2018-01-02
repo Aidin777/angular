@@ -9,10 +9,10 @@ app.set('view engine', 'jade');
 // скрыть заголовки
 app.disable('x-powered-by');
 
-app.use('/build', express.static(path.join(__dirname, 'build'),{
+app.use('build', express.static(path.join(__dirname, 'build'),{
     maxAge: 5000 * 1000
 }));
-app.use('/vendor', express.static(path.join(__dirname, 'vendor')));
+app.use('vendor', express.static(path.join(__dirname, 'vendor')));
 
 
 //прослойка middlewear
